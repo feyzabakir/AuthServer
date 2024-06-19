@@ -10,5 +10,8 @@
 			
 		</FrameworkReference>
 	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.35.0" />
+	</ItemGroup>
 	
 </Project>
