@@ -5,11 +5,11 @@ namespace AuthServer.Core.Interfaces;
 
 public interface IAuthenticationService
 {
-    Task<ResponseDto<TokenDto>> CreateTokenAsync(LoginDto loginDto, CancellationToken cancellationToken);
+    Task<ResponseDto<TokenDto>> CreateTokenAsync(LoginDto loginDto);
 
-    Task<ResponseDto<TokenDto>> CreateTokenByRefreshToken(string refreshToken, CancellationToken cancellationToken);
+    Task<ResponseDto<TokenDto>> CreateTokenByRefreshToken(string refreshToken);
 
-    Task<ResponseDto<NoDataDto>> RevokeRefreshToken(string refreshToken, CancellationToken cancellationToken);
+    Task<ResponseDto<NoDataDto>> RevokeRefreshToken(string refreshToken);
 
-    Task<ResponseDto<ClientTokenDto>> CreateTokenByClientAsync(ClientLoginDto clientLoginDto, CancellationToken cancellationToken);
+    ResponseDto<ClientTokenDto> CreateTokenByClient(ClientLoginDto clientLoginDto);
 }
