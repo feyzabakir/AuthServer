@@ -1,7 +1,6 @@
 ﻿using AuthServer.Core.Dtos;
 using AuthServer.Core.Interfaces;
 using AuthServer.Core.Models;
-using Azure;
 using Microsoft.AspNetCore.Identity;
 using SharedLibrary.Dtos;
 

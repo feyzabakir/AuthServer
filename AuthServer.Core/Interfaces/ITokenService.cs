@@ -1,7 +1,6 @@
 ﻿using AuthServer.Core.Configurations;
 using AuthServer.Core.Dtos;
 using AuthServer.Core.Models;
-using SharedLibrary.Dtos;
 
 namespace AuthServer.Core.Interfaces;
 

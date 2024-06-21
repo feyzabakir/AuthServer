@@ -1,7 +1,6 @@
 ﻿using AuthServer.Core.Interfaces;
 using AuthServer.Core.Repositories;
 using AuthServer.Core.UnitOfWork;
-using Azure;
 using Microsoft.EntityFrameworkCore;
 using SharedLibrary.Dtos;
 using System.Linq.Expressions;
@@ -64,7 +63,7 @@ public class GenericService<TEntity, TDto> : IGenericService<TEntity, TDto> wher
         _genericRepository.Remove(isExistEntity);
 
         await _unitOfWork.CommitAsync();
-        //204 durum kodu =>  No Content  => Response body'sinde hiç bir dat  olmayacak.
+
         return ResponseDto<NoDataDto>.Success(204);
     }
 
